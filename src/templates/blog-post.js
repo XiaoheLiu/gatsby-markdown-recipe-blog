@@ -1,10 +1,29 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
+import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+
+const theme = {
+  green: "#1a967b",
+  offWhite: "#EDEDED",
+  maxWidth: "1000px",
+  bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
+}
+
+const RecipeStyles = styled.div`
+  background: white;
+  border: 1px solid ${theme.offWhite};
+  border-radius: 10px;
+  box-shadow: ${theme.bs};
+  margin-bottom: 15px;
+  padding-top: 10px;
+  code {
+    background-color: ${theme.offWhite};
+    color: ${theme.green};
+    padding: 5px;
+  }
+`
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -19,23 +38,19 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
+        <p>
+          Adapted from{" "}
+          <a href={post.frontmatter.link}>
+            {post.frontmatter.source || "this recipe"}
+          </a>
+          <span style={{ marginLeft: "10px" }}>
+            | Collected by {post.frontmatter.author}
+          </span>
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+        <p>Tags: {post.frontmatter.tags}</p>
+        <RecipeStyles dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <p />
 
         <ul
           style={{
@@ -82,8 +97,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description
+        source
+        link
+        tags
+        author
       }
     }
   }

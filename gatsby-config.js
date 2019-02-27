@@ -3,7 +3,7 @@ module.exports = {
     title: `Athena & Lin's Kitchen`,
     author: `Athena Liu`,
     description: `Athena and Lin's favorite family recipes`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://athena-kitchen.netlify.com/`,
     social: {
       twitter: `athenaliu6`,
       portfolio: `https://athenaliu.now.sh/#/`,

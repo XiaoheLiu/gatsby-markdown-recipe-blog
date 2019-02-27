@@ -3,7 +3,7 @@
 title:  "A Template"
 source: ""
 link: ""
-tags: "main_ingredient, style, country, meal"
+tags: "ingredient, style, country, meal"
 author: "Athena"
 
 ---

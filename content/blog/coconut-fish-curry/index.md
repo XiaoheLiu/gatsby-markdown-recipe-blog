@@ -20,8 +20,8 @@ author: "Athena"
   ```
    Saute 2 minutes.
 - Add `cauliflower, tomatoes, and other vegetables`; sauté 1 minute
-- Stir in water, `coconut milk: 1 can` and lentils; bring to a boil.
-- Cover, reduce heat, and simmer 20 minutes or until lentils are tender.
+- Stir in water, `coconut milk: 1 can`; bring to a boil.
+- Cover, reduce heat, and simmer 20 minutes or until the vegetables are tender.
 - Stir in `basa fillet: 1-2 bags` and simmer for another 5 minutes.
 - Stir in 
   ```

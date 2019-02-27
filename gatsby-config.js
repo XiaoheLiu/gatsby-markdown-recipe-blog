@@ -55,7 +55,6 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -63,7 +62,7 @@ module.exports = {
         short_name: `AnKKitchen`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#0808`,
+        theme_color: `#1a967b`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },

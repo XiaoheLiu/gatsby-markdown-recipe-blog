@@ -16,7 +16,7 @@ const RecipeStyles = styled.div`
   border: 1px solid ${theme.offWhite};
   border-radius: 10px;
   box-shadow: ${theme.bs};
-  margin-bottom: 15px;
+  margin: 10px 0;
   padding-top: 10px;
   code {
     background-color: ${theme.offWhite};
@@ -43,15 +43,13 @@ class BlogPostTemplate extends React.Component {
           <a href={post.frontmatter.link}>
             {post.frontmatter.source || "this recipe"}
           </a>
-          <span style={{ marginLeft: "10px" }}>
-            | Collected by {post.frontmatter.author}
+          <span>
+            {`\t`}| Collected by {post.frontmatter.author}
           </span>
         </p>
-        <p>Tags: {post.frontmatter.tags}</p>
+        Tags: <i>{post.frontmatter.tags}</i>
         <RecipeStyles dangerouslySetInnerHTML={{ __html: post.html }} />
-
         <p />
-
         <ul
           style={{
             display: `flex`,

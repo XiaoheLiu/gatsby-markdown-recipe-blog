@@ -5,6 +5,7 @@ source: "Food Wishes"
 link: "https://foodwishes.blogspot.com/2016/08/paper-pork-shoulder-its-wrap.html"
 tags: "pork, baked, american, dinner"
 author: "Lin"
+date: "2018-09-21"
 
 ---
 

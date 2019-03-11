@@ -11,6 +11,13 @@ const theme = {
   bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)",
 }
 
+const RecipeMeta = styled.div`
+  p {
+    margin: 5px 10px;
+    color: gray;
+  }
+`
+
 const RecipeStyles = styled.div`
   background: white;
   border: 1px solid ${theme.offWhite};
@@ -18,6 +25,7 @@ const RecipeStyles = styled.div`
   box-shadow: ${theme.bs};
   margin: 10px 0;
   padding-top: 10px;
+  padding-left: 10px;
   code {
     background-color: ${theme.offWhite};
     color: ${theme.green};
@@ -38,16 +46,22 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p>
-          Adapted from{" "}
-          <a href={post.frontmatter.link}>
-            {post.frontmatter.source || "this recipe"}
-          </a>
-          <span>
-            {`\t`}| Collected by {post.frontmatter.author}
-          </span>
-        </p>
-        Tags: <i>{post.frontmatter.tags}</i>
+        <RecipeMeta>
+          <p>
+            Collected by {post.frontmatter.author},{" "}
+            <i>on {post.frontmatter.date}</i>
+          </p>
+          <p>
+            Adapted from{" "}
+            <a href={post.frontmatter.link}>
+              {post.frontmatter.source || "this recipe"}
+            </a>
+          </p>
+          <p>
+            {" "}
+            Tags: <i>{post.frontmatter.tags}</i>
+          </p>
+        </RecipeMeta>
         <RecipeStyles dangerouslySetInnerHTML={{ __html: post.html }} />
         <p />
         <ul
@@ -94,6 +108,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
         source
         link

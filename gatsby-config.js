@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Athena & Lin's Kitchen`,
+    title: `🍱 Athena & Lin's Kitchen`,
     author: `Athena Liu`,
     description: `Athena and Lin's favorite family recipes`,
     siteUrl: `https://athena-kitchen.netlify.com/`,
@@ -55,6 +55,7 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

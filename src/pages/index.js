@@ -32,6 +32,10 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              <span>
+                {node.frontmatter.date}
+                {"  "}
+              </span>
               <i>Tags: {node.frontmatter.tags}</i>
               <p
                 dangerouslySetInnerHTML={{
@@ -55,7 +59,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___title], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt(pruneLength: 80)
@@ -63,6 +67,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MM/DD/YYYY")
             title
             tags
           }

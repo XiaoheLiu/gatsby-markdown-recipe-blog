@@ -4,7 +4,8 @@ title:  "Coconut Fish Curry"
 link: "https://www.geniuskitchen.com/recipe/lentil-dal-456"
 source: ""
 tags: fish, stew, indian, dinner
-author: "Athena"
+author: "Lin"
+date: "2018-08-21"
 
 ---
 

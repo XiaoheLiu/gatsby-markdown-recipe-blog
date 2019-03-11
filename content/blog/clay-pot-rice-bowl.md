@@ -5,6 +5,7 @@ source: "The Woks of Life"
 link: "https://thewoksoflife.com/2014/03/hong-kong-style-clay-pot-rice/"
 tags: "rice, 腊肠, steamed, cantonese, dinner"
 author: "Athena"
+date: "2018-02-05"
 
 ---
 
@@ -28,3 +29,4 @@ author: "Athena"
   ```
   Pour in the rice when it is cooked and mix.
 4. Top with `chopped scallion` and serve.
+

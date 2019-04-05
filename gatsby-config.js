@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://athena-kitchen.netlify.com/`,
     social: {
       twitter: `athenaliu6`,
-      portfolio: `https://athenaliu.now.sh/#/`,
+      portfolio: `https://athena-liu.netlify.com`,
     },
   },
   plugins: [

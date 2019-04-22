@@ -3,10 +3,10 @@ module.exports = {
     title: `🍱 Athena & Lin's Kitchen`,
     author: `Athena Liu`,
     description: `Athena and Lin's favorite family recipes`,
-    siteUrl: `https://athena-kitchen.netlify.com/`,
+    siteUrl: `https://recipes.athenaliu.space/`,
     social: {
       twitter: `athenaliu6`,
-      portfolio: `https://athena-liu.netlify.com`,
+      portfolio: `https://athenaliu.space`,
     },
   },
   plugins: [
